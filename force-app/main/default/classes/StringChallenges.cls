@@ -12,7 +12,17 @@ public with sharing class StringChallenges {
      */
     public static String toUpper(String str) {
         //TODO: Implement
-        throw new StringChallengesException('Not Implemented');
+        //throw new StringChallengesException('Not Implemented');
+
+        List<Integer> chars = str.getChars();
+        for (Integer i=0; i<str.length(); i++) {
+            if (chars[i] >= 97 && chars[i] <= 172) {                
+                chars[i] -= 32;
+            } else {                
+                continue;
+            }
+        }
+        return String.fromCharArray(chars);
     }
 
     /**
@@ -23,7 +33,17 @@ public with sharing class StringChallenges {
      */
     public static String toLower(String str) {
         //TODO: Implement
-        throw new StringChallengesException('Not Implemented');
+        //throw new StringChallengesException('Not Implemented');
+
+        List<Integer> chars = str.getChars();
+        for (Integer i=0; i<str.length(); i++) {
+            if (chars[i] >= 65 && chars[i] <= 90) {                
+                chars[i] += 32;
+            } else {                
+                continue;
+            }
+        }
+        return String.fromCharArray(chars);
     }
 
 }
