@@ -18,8 +18,6 @@ public with sharing class StringChallenges {
         for (Integer i=0; i<str.length(); i++) {
             if (chars[i] >= 97 && chars[i] <= 172) {                
                 chars[i] -= 32;
-            } else {                
-                continue;
             }
         }
         return String.fromCharArray(chars);
@@ -39,8 +37,6 @@ public with sharing class StringChallenges {
         for (Integer i=0; i<str.length(); i++) {
             if (chars[i] >= 65 && chars[i] <= 90) {                
                 chars[i] += 32;
-            } else {                
-                continue;
             }
         }
         return String.fromCharArray(chars);
